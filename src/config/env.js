@@ -8,8 +8,8 @@
  */
 
 // let baseUrl = '';
-let baseUrl = 'http://101.69.174.15:8085/snsoftst/';
-// let baseUrl = 'https://4000214001.com/jpnk_wx/';
+//let baseUrl = 'http://101.69.174.15:8085/snsoftst/';
+ let baseUrl = 'https://4000214001.com/snsoft_hpxx/';
 let routerMode = 'history';
 let imgBaseUrl = 'http://www.mycard.top/h5-js/';
 

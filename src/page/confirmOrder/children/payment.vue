@@ -131,7 +131,6 @@
 
             this.po_id = this.orderMessage ? this.orderMessage.po_id: this.$route.query.po_id;
             this.amount = this.orderMessage ? this.orderMessage.amount : this.$route.query.amount;
-
             if(Object.is(this.payWay,2)) {
 
               if(this.userInfo.openid){
@@ -161,8 +160,9 @@
           async payWeixin(){
             if(this.userInfo.openid){
               const res = await getjsapi_signature(this.nonceStr,this.timestamp,this.url);
-              const data = await payWx(this.userInfo.openid,this.nonceStr,this.timestamp,this.url,this.po_id,this.userInfo.user_id,this.amount,'http://www.mycard.top/h5-js/html5/notify_url.html');
 
+              const data = await payWx(this.userInfo.openid,this.nonceStr,this.timestamp,this.url,this.po_id,this.userInfo.user_id,this.amount,'https://www.4000214001.com/wx/wx_notify_url.jsp');
+//                https://www.4000214001.com/wx/html5/notify_url.html
               if(res.result == '1'){
                 let jsapi_signature = res.result_text;
                 wx.config({
@@ -236,7 +236,7 @@
           // 支付宝方法
           payZhifubao(){
 
-            window.open("http://www.mycard.top/h5-js/alipay.html?mytype=getprepay_id&openid=" + this.userInfo.openid + "&noncestr=" + this.noncestr + "&timestamp=" + this.timestamp + "&url=" + this.url + "&orderNo=" + this.po_id + "&userId=" + this.userInfo.user_id + "&money=" + this.amount + "&notify_url=http://www.mycard.top/h5-js/notify_url.jsp", "_blank");
+            window.open("https://www.4000214001.com/wx/alipay.html?mytype=getprepay_id&openid=" + this.userInfo.openid + "&noncestr=" + this.noncestr + "&timestamp=" + this.timestamp + "&url=" + this.url + "&orderNo=" + this.po_id + "&userId=" + this.userInfo.user_id + "&money=" + this.amount + "&notify_url=http://www.mycard.top/h5-js/notify_url.jsp", "_blank");
           },
           // 获取微信用户权限
           getWeixinUser(){

@@ -33,12 +33,12 @@ const state = {
 	addAddress:'',		//新增地址
 	question: null,//问题详情
 	cartPrice: null, //会员卡价格
-  appid: "wxa445cf4c1c719f79",
-  secret:"0208e3510d6994c3ff4481eb001f431f",
+  appid: "wxe53ea6a04b7b40e1",
+  secret:"890fe19c54a457f6c819fa084b11601c",
   kf_account:'kf2003@isMyCard',
   nonceStr:(parseInt(Math.random() * new Date() - 0)).toString(32),
   timestamp:Math.ceil((new Date() - 0)/1000),
-  url:"http://www.mycard.top/h5-js/html5/standard/index.html"
+  url:"https://www.4000214001.com/wx/html5/standard/index.html"
 }
 
 export default new Vuex.Store({

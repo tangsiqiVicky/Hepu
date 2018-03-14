@@ -572,7 +572,11 @@ export const getOrderList = (user_id) => fetch('shops/shoppingCart', {
  * http://101.69.174.15:8085/snsoftst/shops/shoppingCart?actiontype=getdata_po_detail&user_id=U-15604578366&po_id=20171103-0003
  */
 
-
+export const getOrderDetail = (user_id,po_id) => fetch('shops/shoppingCart' ,{
+  actiontype:'getdata_po_detail',
+  user_id,
+  po_id
+});
 
 /**
  * 获取openid userinfo

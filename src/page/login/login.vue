@@ -134,8 +134,8 @@
       },
       // 获取
       request(user_id){
-        let redirectUri = "http://www.mycard.top/h5-js/jpnk.html?user_id="+ user_id;
-        const url = this.getCode("snsapi_base",redirectUri,"base");
+        let redirectUri = "https://4000214001.com/wx/html5/jpnk.html?user_id="+ user_id;
+        const url = this.getCode("snsapi_userinfo",redirectUri,"base");
         window.open(url,"_self");
       },
       //

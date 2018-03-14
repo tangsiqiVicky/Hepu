@@ -39,7 +39,7 @@ module.exports = {
             '/payapi',
         ],
         // proxypath: 'http://cangdu.org:8001',原接口地址
-        proxypath: 'http://101.69.174.15:8080/snsoft/',
+        proxypath: 'https://4000214001.com/snsoft_hpxx/',
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

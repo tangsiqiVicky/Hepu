@@ -453,7 +453,15 @@
                   if (!this.$refs.wrapperMenu) {
                       return
                   }
-                  this.foodScroll.scrollTo(0,-this.shopListTop[this.menuIndex],400);
+//                this.shopListTop.forEach((item, index) => {
+//                  if (this.menuIndexChange && Math.abs(Math.round(pos.y)) >= item) {
+//                    this.menuIndex = index;
+//                    const menuList=this.$refs.wrapperMenu.querySelectorAll('.activity_menu');
+//                    const el = menuList[0];
+//                    wrapperMenu.scrollToElement(el, 800, 0, -(wrapMenuHeight/2 - 50));
+//                  }
+//                })
+                 this.foodScroll.scrollTo(0,-this.shopListTop[this.menuIndex],400);
               })
           },
           //控制活动详情页的显示隐藏
@@ -473,6 +481,10 @@
           //加入购物车，所需7个参数，商铺id，食品分类id，食品id，食品规格id，食品名字，食品价格，食品规格
           addToCart(category_id, item_id, food_id, name, price, specs){
               this.ADD_CART({shopid: this.shopId, category_id, item_id, food_id, name, price, specs});
+              let elLeft = event.target.getBoundingClientRect().left;
+              let elBottom = event.target.getBoundingClientRect().bottom;
+              this.showMoveDot.push(true);
+              this.$emit('showMoveDot', this.showMoveDot, elLeft, elBottom);
           },
           //移出购物车，所需7个参数，商铺id，食品分类id，食品id，食品规格id，食品名字，食品价格，食品规格
           removeOutCart(category_id, item_id, food_id, name, price, specs){
